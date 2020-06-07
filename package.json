@@ -1,0 +1,18 @@
+{
+  "name": "file_search_download",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build_start": "npm run build && node build_cpy.js && npm run start",
+    "build": "npm run-script build --prefix frontend/",
+    "start": "node start.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ncp": "^2.0.0"
+  }
+}

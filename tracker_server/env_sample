@@ -1,0 +1,3 @@
+SERVER_POUCH=http://localhost:5984/
+ELASTIC_URL=http://localhost:9200
+HTTP_PORT=4001

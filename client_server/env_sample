@@ -1,0 +1,9 @@
+INPUT_FOLDER=../resources/
+APP_KEY=aaa
+PIECE_SIZE=65536
+GRPC_PORT=50051
+LOCAL_POCHDB=http://localhost:3030/
+SERVER_POUCHDB=http://localhost:5984/
+TRACKER_SERVER=http://localhost:4001/
+DOWNLOAD_LOCATION=../downloads
+HTTP_PORT=4000

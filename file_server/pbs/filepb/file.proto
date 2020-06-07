@@ -1,0 +1,30 @@
+syntax = "proto3";
+
+package pbs;
+import "google/api/annotations.proto";
+option go_package = "filepb";
+
+message fileChunkRequest {
+    int64 start = 1;
+    string FileHash = 2;
+    int64 pieceSize = 3;
+}
+
+message fileChunkResponse {
+    int64 start = 1;
+    string pieceHash = 2;
+    bytes chunk = 3;
+}
+
+message hasFileRequest {
+    string FileHash = 1;
+}
+
+message hasFileResponse {
+    bool HasFlag = 1;
+}
+
+service FileService {
+    rpc getPiece(stream fileChunkRequest) returns (stream fileChunkResponse) {}
+    rpc hasFile(hasFileRequest) returns (hasFileResponse) {}
+}

@@ -1,0 +1,4 @@
+GRPC_PORT=50051
+LOCAL_POCHDB=http://localhost:3030/
+SERVER_POUCHDB=http://localhost:5984/
+DOWNLOAD_LOCATION=../downloads
