@@ -2,8 +2,11 @@
 Index, search and download files within intranet. some of the implementations is inspired from bittorrent protocol like tracker server, file pieces and dowmloading file pieces from different peers  
 
 ## Architecture  
+- #### Load and sync file info to tracker server
 ![alt text](https://github.com/pramodramdas/file_search_download/blob/master/images/Sync.png?raw=true)  
+- #### Search keyword in file info indexs
 ![alt text](https://github.com/pramodramdas/file_search_download/blob/master/images/index_ping_search.png?raw=true)  
+- #### Download file pieces from peers' grpc server
 ![alt text](https://github.com/pramodramdas/file_search_download/blob/master/images/file_download.png?raw=true)  
 
 ## Application Flow
