@@ -1,5 +1,5 @@
 # file_search_download  
-Index, search and download files within intranet 
+Index, search and download files within intranet. some of the implementations is inspired from bittorrent protocol like tracker server, file pieces and dowmloading file pieces from different peers  
 
 ## Application Flow
 1. When peer boots, it starts reading files from INPUT_FOLDER  
@@ -44,7 +44,7 @@ Index, search and download files within intranet
     f. if piece hash doesn't match then discards piece and diconnects from that peer.  
     g. after receving all pieces, it merges all pieced in order, creates single file and saves into DOWNLOAD_LOCATION  
 
-Steps to start
+## Steps to start
 
 1. Install and start golbal pouchdb server which will be mainly used by tracker server  
     ```npm install -g pouchdb-server```  
@@ -102,7 +102,7 @@ Steps to start
         * To start dev  
             ```npm run start  ```
 
-If started in dev mode visit http://localhost:3000
+If started in dev mode visit http://localhost:3000  
 If started in prod mode visit http://localhost:(peer's HTTP_PORT)
 
 
