@@ -14,7 +14,7 @@ Index, search and download files within intranet. some of the implementations is
     a. if file info is already present then check modifed time, if modified then replace file info in pouchdb  
     b. if file info not present then insert to pouchdb  
     c. sync peer file info to global pouchdb, this is one way directed from local pouchdb to global pouchdb.  
-    d. peer adding heartbeat entry to global pouchdb  
+    d. peer adding heartbeat entry to global pouchdb every 5 seconds 
     
 2. Peer after boot, keeps watch on INPUT_FOLDER  
     a. If any file gets added then that will be added to file info table(peer pouchdb)  
@@ -68,7 +68,7 @@ Index, search and download files within intranet. some of the implementations is
         ELASTIC_URL = http url of elasticsearch server  
         HTTP_PORT = http port of tracker server  
         
-    - Start tracter_server  
+    - Start tracker_server  
         ```npm run start  ```
 
 4. Run peers and peers' file servers (create n number of peers)  
