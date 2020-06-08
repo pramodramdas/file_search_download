@@ -1,18 +1,23 @@
 # file_search_download  
 Index, search and download files within intranet. some of the implementations is inspired from bittorrent protocol like tracker server, file pieces and dowmloading file pieces from different peers  
 
+## Architecture  
+![alt text](https://github.com/pramodramdas/file_search_download/blob/master/images/Sync.png?raw=true)  
+![alt text](https://github.com/pramodramdas/file_search_download/blob/master/images/index_ping_search.png?raw=true)  
+![alt text](https://github.com/pramodramdas/file_search_download/blob/master/images/file_download.png?raw=true)  
+
 ## Application Flow
 1. When peer boots, it starts reading files from INPUT_FOLDER  
     a. if file info is already present then check modifed time, if modified then replace file info in pouchdb  
     b. if file info not present then insert to pouchdb  
-    c. sync peer file info to global pouchdb, this is one way directed from local pouchdb to golobal pouchdb.  
+    c. sync peer file info to global pouchdb, this is one way directed from local pouchdb to global pouchdb.  
     d. peer adding heartbeat entry to global pouchdb  
     
 2. Peer after boot, keeps watch on INPUT_FOLDER  
     a. If any file gets added then that will be added to file info table(peer pouchdb)  
     b. If any file gets removed then that will be removed from file info table(peer pouchdb)  
     c. If any file gets modified the that will replaced in file info table(peer pouchdb)  
-    d. sync peer file info to global pouchdb, this is one way directed from local pouchdb to golobal pouchdb.  
+    d. sync peer file info to global pouchdb, this is one way directed from local pouchdb to global pouchdb.  
     
 3. Tracker server when boots  
     a. It will drop all elastic search file info indexes.  
