@@ -113,6 +113,9 @@ Index, search and download files within intranet. some of the implementations is
 If started in dev mode visit http://localhost:3000  
 If started in prod mode visit http://localhost:(peer's HTTP_PORT)
 
+#### Note:  
+* Files should be less than 10mb, tested with 7mb.
+* txt files tested, for other types refer npm textract.  
 
 File info is saved in the below structure, meta.fileHash is hash if whole file,
 appKey is peerId set in env(APP_KEY), piecesHash is array of file pieces hash based on 
