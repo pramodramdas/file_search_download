@@ -41,7 +41,7 @@ Application Flow
 Steps to start
 
 1. Install and start golbal pouchdb server which will be mainly used by tracker server  
-    ```npm install -g pouchdb-server```
+    ```npm install -g pouchdb-server```  
     ```pouchdb-server --port 5984```
     or
     ```pouchdb-server --port 5984 --in-memory```  
@@ -49,18 +49,18 @@ Steps to start
 2. Install and start elasticsearch server
 
 3. Run tracker server  
-    Edit env of tracker_server  
+    - Edit env of tracker_server  
         SERVER_POUCH = http url of golbal pouchdb server  
         ELASTIC_URL = http url of elasticsearch server  
         HTTP_PORT = http port of tracker server  
-    Start tracter_server  
+    - Start tracter_server  
         ```npm run start  ```
 
 4. Run peers and peers' file servers (create n number of peers)  
     - Run local pouchdb server for each peer  
         ```pouchdb-server --port 3030  ```
         or
-        ```pouchdb-server --port 3030 --in-memory  ```
+        ```pouchdb-server --port 3030 --in-memory  ```  
     - Edit env of peer's file_server  
         DOWNLOAD_LOCATION = relative path of download folder where files will be downloaded  
         SERVER_POUCHDB = http url of golbal pouchdb server  
