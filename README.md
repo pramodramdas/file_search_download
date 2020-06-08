@@ -77,17 +77,17 @@ Steps to start
         DOWNLOAD_LOCATION = relative path of download folder where files will be downloaded  
         HTTP_PORT = http port of peer  
     - Start peer prod (from root folder)  
-        To build and start prod  
+        * To build and start prod  
             ```npm run build_start  ```
-        To only start  
+        * To only start  
             ```npm run start  ```
     - Start peer dev (from root folder)  
-        To start dev  
+        * To start dev  
             ```npm run start  ```
     - Start peer dev frontend (from frontend folder)  
-        Edit package.json  
-            ```"proxy": http url of peer  ```
-        To start dev  
+        * Edit package.json  
+            ```"proxy": http url of peer  ```  
+        * To start dev  
             ```npm run start  ```
 
 If started in dev mode visit http://localhost:3000
