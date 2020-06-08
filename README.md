@@ -54,19 +54,19 @@ Steps to start
         ELASTIC_URL = http url of elasticsearch server  
         HTTP_PORT = http port of tracker server  
     Start tracter_server  
-        npm run start  
+        ```npm run start  ```
 
 4. Run peers and peers' file servers (create n number of peers)  
-    Run local pouchdb server for each peer  
-        pouchdb-server --port 3030  
+    - Run local pouchdb server for each peer  
+        ```pouchdb-server --port 3030  ```
         or
-        pouchdb-server --port 3030 --in-memory  
-    Edit env of peer's file_server  
+        ```pouchdb-server --port 3030 --in-memory  ```
+    - Edit env of peer's file_server  
         DOWNLOAD_LOCATION = relative path of download folder where files will be downloaded  
         SERVER_POUCHDB = http url of golbal pouchdb server  
         LOCAL_POCHDB = http url of peer pouchdb server  
         GRPC_PORT = peer's grpc port number  
-    Edit env of peer  
+    - Edit env of peer  
         INPUT_FOLDER = relative path of sharable folder  
         APP_KEY = peer id, should be unique for each peer  
         PIECE_SIZE = size of pieces that file will be divided into  
@@ -76,17 +76,17 @@ Steps to start
         TRACKER_SERVER = http url of tracker server  
         DOWNLOAD_LOCATION = relative path of download folder where files will be downloaded  
         HTTP_PORT = http port of peer  
-    Start peer prod (from root folder)  
+    - Start peer prod (from root folder)  
         To build and start prod  
-            npm run build_start  
+            ```npm run build_start  ```
         To only start  
-            npm run start  
-    Start peer dev (from root folder)  
+            ```npm run start  ```
+    - Start peer dev (from root folder)  
         To start dev  
-            npm run start  
-    Start peer dev frontend (from frontend folder)  
+            ```npm run start  ```
+    - Start peer dev frontend (from frontend folder)  
         Edit package.json  
-            "proxy": http url of peer  
+            ```"proxy": http url of peer  ```
         To start dev  
             ```npm run start  ```
 
