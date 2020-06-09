@@ -15,10 +15,10 @@ Index, search and download files within intranet. some of the implementations is
 
 ## Application Flow
 **1. When peer boots, it starts reading files from INPUT_FOLDER**  
-    a. If file info is already present then check modifed time, if modified then replace file info in pouchdb  
-    b. If file info not present then insert to pouchdb  
+    a. If file info is already present then check modifed time, if modified then replace file info in peer pouchdb  
+    b. If file info not present then insert to peer pouchdb  
     c. Sync peer file info to global pouchdb, this is one way directed from local pouchdb to global pouchdb.  
-    d. Peer adding heartbeat entry to global pouchdb every 5 seconds 
+    d. Peer adds heartbeat entry to global pouchdb every 5 seconds 
     
 **2. Peer after boot, keeps watch on INPUT_FOLDER**  
     a. If any file gets added then that will be added to file info table(peer pouchdb)  
