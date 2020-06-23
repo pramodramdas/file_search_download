@@ -1,5 +1,5 @@
 # file_search_download  
-Index, search and download files within intranet. some of the implementations is inspired from bittorrent protocol like tracker server, file pieces and dowmloading file pieces from different peers  
+Index, search and download files within intranet. some of the implementations is inspired from bittorrent protocol like tracker server, file pieces and downloading file pieces from different peers  
 
 - #### File server (golang grpc server and grpc client)  
 - #### Tracker server (nodejs express)  
