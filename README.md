@@ -160,5 +160,6 @@ and ip is the address of peer's grpc file server
 #### TODO
 * Timeout piece request and request from other peer
 * Sync when peer connects to intranet
-* Update peerlist regularly when donloading.
+* Update peerlist regularly when downloading.
 * Increase file size, currently can handle below 10MB
+* Only supports one level directory, ie. no nested directories only files
